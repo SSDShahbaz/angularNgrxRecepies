@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import { EntityCollectionServiceBase, EntityCollectionServiceElementsFactory } from '@ngrx/data';
-interface Hero{
-  Id:number,
-  Name:string
-}
+import { Hero } from './Heroes/hero.model';
 @Injectable({
   providedIn: 'root'
 })

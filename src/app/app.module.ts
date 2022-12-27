@@ -1,18 +1,21 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { EntityDataModule } from '@ngrx/data';
+import { EntityDataModule, HttpUrlGenerator } from '@ngrx/data';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { entityConfig } from './entity-metaData';
+import { entityConfig } from './entity-metadata';
+import { HeroesComponent } from './Heroes/Heroes.component';
+import { CustomurlHttpGenerator } from './shared/store/customurl-http-generator';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [	
+    AppComponent,
+      HeroesComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,7 +24,10 @@ import { entityConfig } from './entity-metaData';
     EffectsModule.forRoot([]),
     EntityDataModule.forRoot(entityConfig)
   ],
-  providers: [],
+  providers: [{
+    provide: HttpUrlGenerator,
+    useClass: CustomurlHttpGenerator,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
