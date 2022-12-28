@@ -10,11 +10,19 @@ import { AppComponent } from './app.component';
 import { entityConfig } from './entity-metadata';
 import { HeroesComponent } from './Heroes/Heroes.component';
 import { CustomurlHttpGenerator } from './shared/store/customurl-http-generator';
+import { HomeComponent } from './components/home/home.component';
+import { AddComponent } from './components/add/add.component';
+import { EditComponent } from './components/edit/edit.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [	
     AppComponent,
-      HeroesComponent
+      HeroesComponent,
+      HomeComponent,
+      AddComponent,
+      EditComponent,
+      NavbarComponent
    ],
   imports: [
     BrowserModule,
