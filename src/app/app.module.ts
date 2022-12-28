@@ -14,6 +14,7 @@ import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { cakeEntityConfig } from './components/ngrx_data/entity-metadata';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { cakeEntityConfig } from './components/ngrx_data/entity-metadata';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
