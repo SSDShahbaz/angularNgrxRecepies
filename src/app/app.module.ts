@@ -7,16 +7,16 @@ import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { entityConfig } from './entity-metadata';
 import { HeroesComponent } from './Heroes/Heroes.component';
 import { CustomurlHttpGenerator } from './shared/store/customurl-http-generator';
 import { HomeComponent } from './components/home/home.component';
 import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { cakeEntityConfig } from './components/ngrx_data/entity-metadata';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       HeroesComponent,
       HomeComponent,
@@ -30,7 +30,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HttpClientModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
-    EntityDataModule.forRoot(entityConfig)
+    EntityDataModule.forRoot(cakeEntityConfig)
   ],
   providers: [{
     provide: HttpUrlGenerator,
