@@ -1,0 +1,10 @@
+{
+  "cakes":[
+    {
+      "id":1,
+      "name":"Red velvet",
+      "description":"best cake with panerr and mioneez, it's versy tasty",
+      "cost":180
+    }
+  ]
+}
