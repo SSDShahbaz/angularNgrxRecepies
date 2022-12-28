@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="container mt-2">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let cake of allCakes$ | async">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ cake.name }}</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Price: {{ cake.cost }}</li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <p>{{ cake.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

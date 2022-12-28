@@ -6,7 +6,7 @@ export class CustomurlHttpGenerator extends DefaultHttpUrlGenerator {
   constructor(pluralizer: Pluralizer) {
     super(pluralizer);
   }
- 
+
   protected override getResourceUrls(
     entityName: string,
     root: string,
@@ -20,6 +20,14 @@ export class CustomurlHttpGenerator extends DefaultHttpUrlGenerator {
       };
       this.registerHttpResourceUrls({ [entityName]: resourceURLs });
     }
+    if (entityName == 'Cake') {
+      resourceURLs = {
+        collectionResourceUrl: 'http://localhost:3000/cakes/',
+        entityResourceUrl: 'http://localhost:3000/cakes/',
+      };
+      this.registerHttpResourceUrls({ [entityName]: resourceURLs });
+    }
+
     return resourceURLs;
   }
 }
