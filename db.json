@@ -2,21 +2,9 @@
   "cakes": [
     {
       "id": 1,
-      "name": "Red velvet",
-      "description": "best cake with panerr and mioneez, it's versy tasty",
-      "cost": 180
-    },
-    {
-      "name": "Cake",
-      "description": "this is a cake,sjdf sfjsdfjs n sjdfshdf sdjfgjsdgfjsgdf",
-      "cost": 1234,
-      "id": 2
-    },
-    {
-      "name": "Mohsin",
-      "description": "Mohsin is a cake boy ,r nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac",
-      "cost": null,
-      "id": 3
+      "name": "test sdfsdf",
+      "description": "descsdffsfs",
+      "cost": 2000
     }
   ]
 }

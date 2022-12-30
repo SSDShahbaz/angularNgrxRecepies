@@ -1,7 +1,7 @@
 <div class="container mt-2">
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" *ngFor="let cake of allCakes$ | async">
-      <div class="card">
+      <div class="card" style="min-height: 300px;">
         <div class="card-body">
           <h5 class="card-title">{{ cake.name }}</h5>
           <ul class="list-group list-group-flush">
@@ -10,6 +10,12 @@
         </div>
         <div class="card-body">
           <p>{{ cake.description }}</p>
+        </div>
+        <div class="card-body">
+          <a class="btn btn-warning" [routerLink]="['/edit', cake.id]">Edit</a> |
+          <button type="button" class="btn btn-danger" (click)="delete(cake.id)">
+            Delete
+          </button>
         </div>
       </div>
     </div>
